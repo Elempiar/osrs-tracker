@@ -1,0 +1,12 @@
+@mixin section-borders{
+    border-top: 2px solid $lightgray;
+    border-bottom: 2px solid $lightgray;
+}
+
+@mixin section-border-top{
+    border-top: 2px solid $lightgray;
+}
+
+@mixin section-border-bottom{
+    border-bottom: 2px solid $lightgray;
+}
