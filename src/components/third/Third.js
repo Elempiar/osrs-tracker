@@ -1,7 +1,7 @@
 import { Background, Parallax } from 'react-parallax'
 import './Third.scss'
-import bgBack from "./images/bg-back.jpeg"
-import bgFront from "./images/bg-front.webp"
+import bgBack from './images/bg-back.jpeg'
+import bgFront from './images/bg-front.webp'
 
 export default function Third() {
     return(
@@ -15,7 +15,7 @@ export default function Third() {
                         </div>
                         <Parallax strength={ 0 }>
                             <Background>
-                                <img src={ bgFront} alt="Parallax Front" />
+                                <img src={ bgFront} alt='Parallax Front' />
                             </Background>
                         </Parallax>
                     </Parallax>

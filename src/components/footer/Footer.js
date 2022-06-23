@@ -9,7 +9,7 @@ export default function Footer(){
                         Een waanzinnige test-pagina van Luuk Verboeket.
                     </span>
                     <span className='col-6 text-end'>
-                        <a href="https://github.com/Elempiar">GitHub</a>
+                        <a href='https://github.com/Elempiar'>GitHub</a>
                     </span>
                 </div>
             </div>

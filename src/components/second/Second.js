@@ -1,6 +1,6 @@
 import { Parallax } from 'react-parallax'
 import './Second.scss'
-import bgBack from "./images/bg-back.jpeg"
+import bgBack from './images/bg-back.jpeg'
 
 export default function Second() {
     return(
