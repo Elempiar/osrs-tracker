@@ -1,0 +1,8 @@
+@import '../../scss/main.scss';
+
+section.fourth{
+    .react-parallax{
+        height: 80vh;
+        @include section-border-bottom;
+    }
+}

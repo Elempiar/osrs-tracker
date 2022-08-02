@@ -1,21 +1,14 @@
-import { useEffect } from "react";
 import { Background, Parallax } from "react-parallax";
-import bgBack from "./images/bg-back.jpeg";
+import bgBack from "./images/bg-back.webp";
 import bgFront from "./images/bg-front.webp";
 
-export default function First() {
-  useEffect(() => {});
-
+export default function Fourth() {
   return (
-    <section>
+    <section className="fourth">
       <div className="container-fluid">
-        <div className="row text-align-center">
+        <div className="row">
           <Parallax bgImage={bgBack.src} strength={500}>
-            <div className="col-12 text-center position-absolute bottom-0 pb-5">
-              <h1>Parallax Test</h1>
-              <p>Lorem Ipsum Dolor Sit Amet.</p>
-            </div>
-            <Parallax strength={100}>
+            <Parallax strength={0}>
               <Background>
                 <img src={bgFront.src} alt="Parallax Front" />
               </Background>
