@@ -1,18 +1,32 @@
-@import './variables.scss';
-@import './mixins.scss';
+@import "./variables.scss";
+@import "./mixins.scss";
 
 // ------------------------------------------------------ //
 // ---------------------TYPOGRAPHY----------------------- //
 // ------------------------------------------------------ //
-body{
-    font-size: 16px;
-    color: $white;
+body {
+  font-size: 16px;
+  color: $white;
 
-    h1,h2,h3,h4,h5,h6,p{
-        text-shadow: 2px 2px 3px rgba($color: #000000, $alpha: .8);
-    }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    text-shadow: 2px 2px 3px rgba($color: #000000, $alpha: 0.8);
+  }
 
-    footer{
-        font-size: .8rem;
-    }
+  footer {
+    font-size: 0.8rem;
+  }
+}
+
+.container-fluid {
+  margin-top: 50px;
+  .react-parallax {
+    height: 80vh;
+    @include section-border-top;
+  }
 }
