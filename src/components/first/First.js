@@ -7,7 +7,7 @@ export default function First() {
   useEffect(() => {});
 
   return (
-    <section>
+    <section className="first">
       <div className="container-fluid">
         <div className="row text-align-center">
           <Parallax bgImage={bgBack.src} strength={500}>
