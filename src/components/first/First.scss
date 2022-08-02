@@ -1,9 +1,0 @@
-@import "../../scss/main.scss";
-
-.container-fluid {
-  margin-top: 50px;
-  .react-parallax {
-    height: 80vh;
-    @include section-border-top;
-  }
-}

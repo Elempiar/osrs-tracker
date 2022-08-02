@@ -23,10 +23,45 @@ body {
   }
 }
 
-.container-fluid {
-  margin-top: 50px;
-  .react-parallax {
-    height: 80vh;
+// ------------------------------------------------------ //
+// ----------------------STANDARD------------------------ //
+// ------------------------------------------------------ //
+
+body {
+  background: $darkgray;
+}
+.first {
+  .container-fluid {
+    margin-top: 50px;
     @include section-border-top;
+    .react-parallax {
+      height: 80vh;
+    }
+  }
+}
+
+.second {
+  .container-fluid {
+    @include section-borders;
+    .react-parallax {
+      height: 40vh;
+    }
+  }
+}
+
+.third {
+  .container-fluid {
+    .react-parallax {
+      height: 80vh;
+    }
+  }
+}
+
+.fourth {
+  .container-fluid {
+    @include section-borders;
+    .react-parallax {
+      height: 80vh;
+    }
   }
 }
