@@ -27,6 +27,8 @@ export default function App({ stats }) {
   let pvm = stats[mode]["bosses"];
   let skills = stats[mode]["skills"];
 
+  console.log(stats);
+
   return (
     <>
       <Head>
