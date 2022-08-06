@@ -31,6 +31,23 @@ body {
   background: $darkgray;
 }
 
+section {
+  padding: 3rem 0;
+}
+
+.skills-tab {
+  flex-wrap: wrap;
+  width: 204px;
+  .skills-tab-item {
+    border: 1px solid white;
+    padding: 5px;
+    &[data-key="overall"] {
+      .skills-tab-cap {
+        display: none;
+      }
+    }
+  }
+}
 
 .third {
   .container-fluid {
