@@ -13,7 +13,6 @@ let pageTitle = `OSRS HiScore | ${user}`;
 
 export async function getStaticProps() {
   const stats = await hiscores.getStats(user);
-
   return {
     props: {
       stats,

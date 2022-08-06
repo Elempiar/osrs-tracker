@@ -1,5 +1,4 @@
 import { Background, Parallax } from "react-parallax";
-
 import bgBack from "./images/bg-back.jpeg";
 import bgFront from "./images/bg-front.webp";
 
