@@ -51,7 +51,7 @@ const skillsIcons = [
   "/images/Farming_icon.png",
   "/images/Construction_icon.png",
   "/images/Hunter_icon.png",
-  "overall",
+  "",
 ];
 
 export default function Skills({ obj }) {
@@ -115,7 +115,8 @@ export function SkillsTab({ obj, skillKeys }) {
       {skillKeys.map((skill, i) => (
         <div
           key={skill}
-          data-key={skillsOrdered[i]}
+          data-skill={skillsOrdered[i]}
+          data-level={obj[skillsOrdered[i]]["level"]}
           className="skills-tab-wrap col-4"
         >
           <div className="skills-tab-skill">
