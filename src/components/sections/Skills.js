@@ -27,6 +27,33 @@ const skillsOrdered = [
   "overall",
 ];
 
+const skillsIcons = [
+  "/images/Attack_icon.png",
+  "/images/Hitpoints_icon.png",
+  "/images/Mining_icon.png",
+  "/images/Strength_icon.png",
+  "/images/Agility_icon.png",
+  "/images/Smithing_icon.png",
+  "/images/Defence_icon.png",
+  "/images/Herblore_icon.png",
+  "/images/Fishing_icon.png",
+  "/images/Ranged_icon.png",
+  "/images/Thieving_icon.png",
+  "/images/Cooking_icon.png",
+  "/images/Prayer_icon.png",
+  "/images/Crafting_icon.png",
+  "/images/Firemaking_icon.png",
+  "/images/Magic_icon.png",
+  "/images/Fletching_icon.png",
+  "/images/Woodcutting_icon.png",
+  "/images/Runecraft_icon.png",
+  "/images/Slayer_icon.png",
+  "/images/Farming_icon.png",
+  "/images/Construction_icon.png",
+  "/images/Hunter_icon.png",
+  "overall",
+];
+
 export default function Skills({ obj }) {
   let skillKeys = Object.keys(obj);
 
@@ -56,7 +83,7 @@ export default function Skills({ obj }) {
       <div className="container">
         <h2>Skills Section</h2>
         <div className="row">
-          <div className="col-6 text-align-center">
+          <div className="col-md-6">
             <div className="col-12 my-4 ps-5">
               <h3>Total XP</h3>
               <span>
@@ -74,7 +101,7 @@ export default function Skills({ obj }) {
               </span>
             </div>
           </div>
-          {SkillsTab({ obj, skillKeys })}
+          <div className="col-md-6">{SkillsTab({ obj, skillKeys })}</div>
         </div>
       </div>
     </section>
@@ -82,15 +109,26 @@ export default function Skills({ obj }) {
 }
 
 export function SkillsTab({ obj, skillKeys }) {
+  let test = 1;
   return (
-    <div className="col-6">
-      <div className="skills-tab d-flex">
-        {skillKeys.map((skill, i,) => (
-          <div key={skill} data-key={skillsOrdered[i]} className="skills-tab-item col-4 d-block">
-            <span className="skills-tab-lvl">{obj[skillsOrdered[i]]["level"]}</span><span className="skills-tab-cap"> / 99</span>
+    <div className="skills-tab d-flex">
+      {skillKeys.map((skill, i) => (
+        <div
+          key={skill}
+          data-key={skillsOrdered[i]}
+          className="skills-tab-wrap col-4"
+        >
+          <div className="skills-tab-skill">
+            <span className="skills-tab-skill-title">Total Level:</span>
+            <img className="skills-tab-skill-icon" src={skillsIcons[i]} />
+            <span className="skills-tab-skill-lvl">
+              {obj[skillsOrdered[i]]["level"]}
+            </span>
+            <div className="skills-tab-skill-divider"></div>
+            <span className="skills-tab-skill-cap">99</span>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 }

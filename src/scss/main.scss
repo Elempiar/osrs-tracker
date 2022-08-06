@@ -27,8 +27,11 @@ body {
 // ----------------------STANDARD------------------------ //
 // ------------------------------------------------------ //
 
+* {
+  box-sizing: border-box;
+}
 body {
-  background: $darkgray;
+  background: $nearblack;
 }
 
 section {
@@ -37,13 +40,76 @@ section {
 
 .skills-tab {
   flex-wrap: wrap;
-  width: 204px;
-  .skills-tab-item {
-    border: 1px solid white;
-    padding: 5px;
-    &[data-key="overall"] {
-      .skills-tab-cap {
+  aspect-ratio: 204/275;
+  width: 408px;
+  padding: 15px;
+  padding-bottom: 23px;
+  border: 2px solid $darkgray;
+  border-radius: 1rem;
+  background-size: cover;
+  .skills-tab-wrap {
+    padding: 3px;
+    padding-bottom: 2px;
+    .skills-tab-skill {
+      background: rgba(0, 0, 0, 0.1);
+      filter: drop-shadow(0 0 0.75rem black);
+      height: 100%;
+      position: relative;
+      font-size: 20px;
+      line-height: 1em;
+      .skills-tab-skill-title {
         display: none;
+      }
+      .skills-tab-skill-icon {
+        position: absolute;
+        bottom: 50%;
+        left: 30px;
+        transform: translate(-50%, 50%) scale(1.75);
+      }
+      span {
+        display: block;
+        position: absolute;
+        &.skills-tab-skill-lvl {
+          top: 5px;
+          right: 32px;
+        }
+        &.skills-tab-skill-cap {
+          bottom: 8px;
+          right: 7px;
+        }
+      }
+      .skills-tab-skill-divider {
+        display: block;
+        position: absolute;
+        right: 30px;
+        transform: rotate(45deg);
+        height: 90%;
+        width: 2px;
+        background: $darkgray;
+        border-radius: 1rem;
+      }
+    }
+    &[data-key="overall"] {
+      .skills-tab-skill {
+        .skills-tab-skill-lvl {
+          top: unset;
+          bottom: 8px;
+          right: 50%;
+          transform: translateX(50%);
+        }
+        .skills-tab-skill-title {
+          display: block;
+          width: 100%;
+          text-align: center;
+          top: 8px;
+          right: 50%;
+          transform: translateX(50%);
+        }
+        .skills-tab-skill-icon,
+        .skills-tab-skill-cap,
+        .skills-tab-skill-divider {
+          display: none;
+        }
       }
     }
   }

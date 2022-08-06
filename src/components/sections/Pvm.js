@@ -20,7 +20,7 @@ export default function Pvm({ obj }) {
     <section className="pvm">
       <div className="container">
         <h2>Pvm Section</h2>
-        <div className="row text-align-center">
+        <div className="row">
           <div className="col-12 my-4 ps-5">
             <h3>Highest KC</h3>
             <span>
