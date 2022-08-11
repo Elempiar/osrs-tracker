@@ -60,7 +60,10 @@ export default function Skills({ obj }) {
   let totalKey = skillKeys[0];
   let skillCount = 0;
   let xpHighest = 0;
-  let skillHighest = 0;
+  let skillHighest;
+  let xpClosest = 0;
+  let skillClosest;
+  let xpLeft = 0;
 
   skillKeys.map((skill, i) => {
     let thisXp = obj[skill]["xp"];
@@ -76,6 +79,12 @@ export default function Skills({ obj }) {
     if (thisLevel >= 99 && skillKeys[i] != "overall") {
       skillCount += 1;
     }
+
+    if (thisLevel != 99 && thisXp > xpClosest && skillKeys[i] != "overall") {
+      xpClosest = thisXp;
+      skillClosest = FORMATTED_SKILL_NAMES[skillKeys[i]];
+      xpLeft = 13034431 - xpClosest;
+    }
   });
 
   return (
@@ -84,20 +93,26 @@ export default function Skills({ obj }) {
         <h2>Skills Section</h2>
         <div className="row">
           <div className="col-md-6">
-            <div className="col-12 my-4 ps-5">
+            <div className="col-12 my-4 ps-md-5">
               <h3>Total XP</h3>
               <span>
-                {FORMATTED_SKILL_NAMES[totalKey]}: {obj[totalKey]["xp"]}
+                {FORMATTED_SKILL_NAMES[totalKey]}: {obj[totalKey]["xp"]} XP.
               </span>
             </div>
-            <div className="col-12 my-4 ps-5">
+            <div className="col-12 my-4 ps-md-5">
               <h3>Total 99s</h3>
-              <span>{skillCount}</span>
+              <span>{skillCount}.</span>
             </div>
-            <div className="col-12 my-4 ps-5">
+            <div className="col-12 my-4 ps-md-5">
+              <h3>Closest to 99</h3>
+              <span>
+                {skillClosest}: {xpLeft} XP left for 99.
+              </span>
+            </div>
+            <div className="col-12 my-4 ps-md-5">
               <h3>Highest XP</h3>
               <span>
-                {skillHighest}: {xpHighest}
+                {skillHighest}: {xpHighest} XP.
               </span>
             </div>
           </div>
