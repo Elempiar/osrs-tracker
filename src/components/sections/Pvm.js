@@ -21,10 +21,10 @@ export default function Pvm({ obj }) {
       <div className="container">
         <h2>Pvm Section</h2>
         <div className="row">
-          <div className="col-12 my-4 ps-5">
+          <div className="col-12 my-4 ps-md-5">
             <h3>Highest KC</h3>
             <span>
-              {objHighest}: {scoreHighest}
+              {objHighest}: {scoreHighest} KC.
             </span>
           </div>
         </div>
