@@ -72,8 +72,6 @@ export default function Skills({ obj }) {
     if (thisXp > xpHighest && skillKeys[i] != "overall") {
       xpHighest = thisXp;
       skillHighest = FORMATTED_SKILL_NAMES[skillKeys[i]];
-    } else {
-      xpHighest = xpHighest;
     }
 
     if (thisLevel >= 99 && skillKeys[i] != "overall") {
@@ -92,7 +90,7 @@ export default function Skills({ obj }) {
       <div className="container">
         <h2>Skills Section</h2>
         <div className="row">
-          <div className="col-md-6">
+          <div className="col-md-6 d-flex flex-column justify-content-center">
             <div className="col-12 my-4 ps-md-5">
               <h3>Total XP</h3>
               <span>
@@ -116,7 +114,9 @@ export default function Skills({ obj }) {
               </span>
             </div>
           </div>
-          <div className="col-md-6">{SkillsTab({ obj, skillKeys })}</div>
+          <div className="col-md-6 d-flex flex-column justify-content-center">
+            {SkillsTab({ obj, skillKeys })}
+          </div>
         </div>
       </div>
     </section>
