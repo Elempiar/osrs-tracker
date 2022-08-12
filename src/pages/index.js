@@ -1,10 +1,9 @@
 import React from "react";
 import hiscores from "osrs-json-hiscores";
-import { useRouter } from "next/router";
 import Head from "next/head";
 import Pvm from "../components/sections/Pvm";
 import Skills from "../components/sections/Skills";
-import Third from "../components/third/Third";
+import Clues from "../components/sections/Clues";
 import Fourth from "../components/fourth/Fourth";
 import Footer from "../components/footer/Footer";
 
@@ -25,8 +24,7 @@ export default function App({ stats }) {
   let mode = stats.mode;
   let pvm = stats[mode]["bosses"];
   let skills = stats[mode]["skills"];
-
-  console.log(stats);
+  let clues = stats[mode]["clues"];
 
   return (
     <>
@@ -38,7 +36,7 @@ export default function App({ stats }) {
       <main className="text-center text-md-start">
         <Skills obj={skills} />
         <Pvm obj={pvm} />
-        <Third />
+        <Clues obj={clues} />
         <Fourth />
       </main>
       <Footer />
